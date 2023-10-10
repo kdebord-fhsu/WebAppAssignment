@@ -23,3 +23,4 @@ To view the prototype, follow these steps:
 - **styles.css:** Contains custom CSS styles to enhance the design. Materialize CSS classes are used for most of the styling.
 - **README.md:** Provides an overview of the project and instructions on how to view the prototype.
 
+Kelton DeBord - INF654
