@@ -23,6 +23,9 @@ header {
   color: black;
 }
 
+.modal-content {
+  color: black;
+}
 /* Footer Styles */
 footer {
   background-color: #FAB20B; /* Yellow */
