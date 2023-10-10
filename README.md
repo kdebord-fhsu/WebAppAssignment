@@ -13,7 +13,7 @@ To view the prototype, follow these steps:
 1. Clone this repository to your local machine using the following command:
 ```git clone <https://github.com/kdebord-fhsu/WebAppAssignment>```
 
-2. Navigate to the project directory: cd web-application-prototype
+2. Navigate to the project directory: cd WebAppAssignment
 
 3. Open the `index.html` file in your default web browser to see the web application prototype in action.
 
