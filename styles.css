@@ -2,58 +2,28 @@
 
 /* Body Styles */
 body {
-  background-color: #f9f9f9;
-  color: #333;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #f4f4f4;
 }
 
 /* Header Styles */
 header {
-  background-color: #00796b; /* Dark Teal */
-  color: white;
-  padding: 10px 0;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+  background-color: #009688; /* Teal */
 }
 
 .brand-logo {
-  margin-left: 20px; /* Adjust the logo's position */
-}
-
-/* Navigation Styles */
-nav {
-  background-color: #009688; /* Teal */
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #004d40; /* Darker Teal on hover */
+  margin-left: 20px;
 }
 
 /* Main Content Styles */
 .container {
-  padding: 20px;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Button Styles */
+.modal-trigger {
+  background-color: #009688; /* Teal */
+  color: white;
 }
 
 /* Footer Styles */
@@ -65,30 +35,4 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-/* Button Styles */
-.modal-trigger {
-  background-color: #009688; /* Teal */
-  color: white;
-  transition: 0.3s ease;
-}
-
-.modal-trigger:hover {
-  background-color: #004d40; /* Darker Teal on hover */
-}
-
-/* Modal Styles */
-.modal {
-  color: #333;
-}
-
-.modal-content {
-  background-color: white;
-  color: #333;
-}
-
-.modal-footer {
-  background-color: #009688; /* Teal */
-  color: white;
 }
