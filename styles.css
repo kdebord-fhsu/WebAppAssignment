@@ -2,16 +2,13 @@
 
 /* Body Styles */
 body {
-  background-color: #f4f4f4;
+  background-color: black;
+  color: white;
 }
 
 /* Header Styles */
 header {
-  background-color: #009688; /* Teal */
-}
-
-.brand-logo {
-  margin-left: 20px;
+  background-color: #FAB20B; /* Yellow */
 }
 
 /* Main Content Styles */
@@ -22,17 +19,16 @@ header {
 
 /* Button Styles */
 .modal-trigger {
-  background-color: #009688; /* Teal */
-  color: white;
+  background-color: #FAB20B; /* Yellow */
+  color: black;
 }
 
 /* Footer Styles */
 footer {
-  background-color: #009688; /* Teal */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  background-color: #FAB20B; /* Yellow */
+  color: black;
+}
+
+.card-content {
+  color: black;
 }
