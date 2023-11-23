@@ -5,7 +5,7 @@
   <!-- Include Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script>
+  <script type="module">
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, push, onValue, update, remove } from "firebase/database";
@@ -63,7 +63,7 @@ const database = getDatabase(app);
   }
 
   // Example usage
-  const dataKeyToUpdate = "AIzaSyAqdAjY9RO2dscyd1KN8_rZknkbDjzCEH4";
+  const dataKeyToUpdate = "-Mabc123";
   const updatedData = {
     title: "Updated Title",
     description: "This data has been updated."
@@ -79,6 +79,49 @@ const database = getDatabase(app);
   // Example usage
   const dataKeyToDelete = "your_data_key"; // Replace with the actual key
   deleteData(dataKeyToDelete);
+
+    function signUp(email, password) {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("User signed up:", user);
+      })
+      .catch((error) => {
+        console.error("Sign-up error:", error.message);
+      });
+  }
+
+  function signIn(email, password) {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("User signed in:", user);
+      })
+      .catch((error) => {
+        console.error("Sign-in error:", error.message);
+      });
+  }
+  function signOut() {
+    signOut(auth)
+      .then(() => {
+        console.log("User signed out");
+      })
+      .catch((error) => {
+        console.error("Sign-out error:", error.message);
+      });
+  }
+    // Check if user is authenticated
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in
+      console.log("User is signed in:", user);
+      // Redirect or enable authenticated content
+    } else {
+      // User is signed out
+      console.log("User is signed out");
+      // Redirect or show login/signup options
+    }
+  });
 </script>
   <!-- Navbar -->
   <header>
