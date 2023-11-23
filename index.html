@@ -87,6 +87,24 @@
       var instances = M.Modal.init(elems);
     });
   </script>
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAqdAjY9RO2dscyd1KN8_rZknkbDjzCEH4",
+  authDomain: "mobile-web-development-5a47e.firebaseapp.com",
+  databaseURL: "https://mobile-web-development-5a47e-default-rtdb.firebaseio.com",
+  projectId: "mobile-web-development-5a47e",
+  storageBucket: "mobile-web-development-5a47e.appspot.com",
+  messagingSenderId: "242842353088",
+  appId: "1:242842353088:web:4577ee9fb8d3c184ca1c25",
+  measurementId: "G-RS2QRQV4FM"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 </body>
 
 </html>
