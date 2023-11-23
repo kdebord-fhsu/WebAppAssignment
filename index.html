@@ -79,7 +79,7 @@
     deleteData(dataKeyToDelete);
 
     // Function to sign up a new user
-    function signUp(email, password) {
+    function signUpUser(email, password) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -91,7 +91,7 @@
     }
 
     // Function to sign in an existing user
-    function signIn(email, password) {
+    function signInUser(email, password) {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -103,7 +103,7 @@
     }
 
     // Function to sign out the current user
-    function signOut() {
+    function signOutUser() {
       signOut(auth)
         .then(() => {
           console.log("User signed out");
@@ -187,7 +187,7 @@
       <p>A bunch of text. You can add more content here to simulate a detailed modal description.</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat black-text">Agree</a>
+      <a href="https://www.fhsu.edu/" class="modal-close waves-effect waves-green btn-flat black-text">Agree</a>
     </div>
   </div>
 
@@ -199,15 +199,27 @@
   </footer>
 
   <!-- Include Materialize JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 
   <!-- Initialize Modal -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.modal');
-      var instances = M.Modal.init(elems);
-    });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
 
+    // Manually open the modal on button click
+    var modalTrigger = document.querySelector('.modal-trigger');
+    modalTrigger.addEventListener('click', function () {
+      var modalInstance = M.Modal.getInstance(elems[0]);
+      if (modalInstance) {
+        modalInstance.open();
+      } else {
+        console.error('Modal instance not found');
+      }
+    });
+  });
 </body>
   </script>
 
